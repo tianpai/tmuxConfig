@@ -1,0 +1,80 @@
+                             INSTALL TMUX CONFIG
+                             ===================
+
+STEP 0                          Prerequisite
+-------------------------------------------------------------------------------
+  Install tmux
+    Ubuntu:
+      sudo apt-get install tmux
+
+    Fedora:
+      sudo dnf install tmux
+    
+    MacOS(Homebrew):
+      brew install tmux  
+
+
+STEP 1                        Clone this repo 
+-------------------------------------------------------------------------------
+
+    git clone https.//github.com/tianpai/tmuxConfig.git
+
+
+STEP 2          Soft link or cp .tmux.conf to home directory
+-------------------------------------------------------------------------------
+  
+  Change directory to tmuxConfig folder
+
+    cd path/to/tmuxConfig/
+  
+  Soft link .tmux.conf to home directory
+
+    ln -s tmuxConfig/.tmux.conf ~/.tmux.conf
+
+  Or cpoy .tmux.conf to home directory
+
+    cp tmuxConfig/.tmux.conf ~/.tmux.conf
+
+
+STEP 2.1                       Source .tmux.conf
+-------------------------------------------------------------------------------
+ 
+    tmux source-file ~/.tmux.conf
+
+
+STEP 3      Install TPM (Tmux Plugin Manager) and source .tmux.conf
+-------------------------------------------------------------------------------
+
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+
+STEP 4                 Open tmux and install plugins
+-------------------------------------------------------------------------------
+
+Open terminal and type:
+  tmux
+  Press [prefix] + I (capital i, as in Install) to fetch the plugin.
+
+  (the [prefix] for this config is Ctrl + a)
+
+
+                                    USAGE
+                                    =====
+
+  Most of the key bindings are the same as default 
+
+  IMPORTANT:                                           (same as default)
+  preifx + I        Install plugins
+  prefix + U        Update plugins
+  prefix + r        Reload config file
+
+
+  CUSTOM KEY BINDINGS:                                 (different from default)
+  prefix + -        Split window vertically
+  prefix + |        Split window horizontally
+  prefix + up       Go to the pane above
+  prefix + down     Go to the pane below
+  prefix + left     Go to the pane on the left
+  prefix + right    Go to the pane on the right
+
+
